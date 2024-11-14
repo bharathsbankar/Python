@@ -29,16 +29,21 @@ def func(n):
 list=[1,4,2,5,3]
 print(f"list {list}")
 def bubbleSort(list):
-    global a
-    a=0
-    for i in range(1,len(list)):
+    global a,b # a denotes the total no.. of swappings done in sorting method
+    # b is used to check total no.. of comparisons made in a  sorting method
+    a,b=0,0
+    for i in range(1,len(list)):#outer loop is for no.. of iterations the inner loop can be applied
+        #inner loop is for no. of comparisons
         for j in range(len(list)-i):
-            if list[j]>list[j+1]:
+            if list[j]>list[j+1]:#this condition sorts in ascending order
+                #swap condition
                 list[j],list[j+1]=list[j+1],list[j]
                 a+=1
+            b+=1
+
 
     return list
 compar=func(len(list)-1)
 print(f"list  after sorting : "
       f"{bubbleSort(list)}"
-      f"\nand number of comparisons taken is {compar} \n and no.. of swapings is {a} for {len(list)} elements ")
+      f"\nand number of comparisons taken is {compar} \n and no.. of swapings is {a} for {len(list)} elements ,{b} ")
