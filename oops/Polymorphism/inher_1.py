@@ -1,17 +1,17 @@
-"""duck typing"""
+# ---------duck typing--------------
 
 class A:
     @staticmethod
     def execute():
         print("A executed")
-        return 2
+
 class B:
     def execute(self):
         print("B executed")
 class C:
     def func(self,obj):
-        b=A.execute()
-        print(b)
+        A.execute()
+        
 obj_A=A()
 obj_B=B()
 obj_C=C()

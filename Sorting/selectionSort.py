@@ -15,3 +15,5 @@ def selectionSort(list):
 
 
 print(f"list  after sorting : {selectionSort(list)}")
+
+
